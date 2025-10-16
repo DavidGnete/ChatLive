@@ -8,7 +8,7 @@ export default function Chat() {
 
   useEffect(() => {
     // Crear WebSocket apuntando al servidor interno de Next.js
-    wsRef.current = new WebSocket("ws://chatlivebackend.onrender.com");
+    wsRef.current = new WebSocket("wss://chatlivebackend.onrender.com");
 
     wsRef.current.onmessage = (event) => {
       setMessages((prev) => [...prev, event.data]);
