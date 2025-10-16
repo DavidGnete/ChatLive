@@ -1,6 +1,6 @@
 import { WebSocketServer } from "ws";
 
-const PORT = process.env.PORT || 8765;
+const PORT = Number(process.env.PORT)|| 8765;
 
 const wss = new WebSocketServer({ port: PORT });
 console.log(`WebSocket server running on port ${PORT}`);
